@@ -1,11 +1,8 @@
-const express = require( "express" );
-const cors = require("cors");
-const app = express();
+import express from "express";
+import cors from "cors";
 
 // Routes
-app.get( "/", ( req:any, res:any ) => {
-    res.send( "Hello world!" );
-} );
+import {router as rootRouter } from "./src/routes/rootRoutes";
 
 // Environment Variables
 if (process.env.NODE_ENV !== 'production') {
@@ -14,12 +11,14 @@ if (process.env.NODE_ENV !== 'production') {
 
 const port = process.env.PORT || 3003;
 
-// start the Express server
+// Defining Express Server
+const app = express();
 app.use(cors());
 app.use(express.json())
 // connect to the database, process.env.NODE_ENV
 
 // Defining the routes
+app.use("/", rootRouter);
 
 // Listen to server
 app.listen( port, () => {
