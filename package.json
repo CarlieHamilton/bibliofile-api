@@ -4,6 +4,7 @@
   "description": "API for bibliophiles",
   "main": "app.js",
   "scripts": {
+    "build": "tsc",
     "start": "ts-node-dev ./app.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
