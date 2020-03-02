@@ -1,0 +1,30 @@
+{
+  "name": "bibliofile-api",
+  "version": "1.0.0",
+  "description": "API for bibliophiles",
+  "main": "app.js",
+  "scripts": {
+    "start": "ts-node-dev ./app.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlueCodeThree/bibliofile-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BlueCodeThree/bibliofile-api/issues"
+  },
+  "homepage": "https://github.com/BlueCodeThree/bibliofile-api#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/node": "^13.7.7",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "tslint": "^6.0.0",
+    "typescript": "^3.8.3"
+  }
+}
