@@ -8,7 +8,7 @@ This readme is obviously a WIP, right now I'm just writing notes to myself about
 To install this api, fork or clone this repository and run the command:
 
 ```
-npm i
+$ npm i
 ```
 This should install the dependencies.
 
@@ -26,7 +26,7 @@ In the repository there is a sample environment file, under `~/.env.sample`. Thi
 To Run the Server, run the command in your command line:
 
 ```
-npm start
+$ npm start
 ```
 
 This will start the server. The api by default runs on the port `localhost:3003` (mainly because 3 is my favourite number)
@@ -44,7 +44,7 @@ I haven't created any tests yet (or I have but haven't talked about them here be
 To run all the tests, run the code:
 
 ```
-npm test
+$ npm test
 ```
 
 ## How It's Built
