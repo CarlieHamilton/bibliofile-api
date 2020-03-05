@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import { pool } from "./psqlconfig";
+import { pool } from "./config/psqlConfig";
 
 // Routes
 import {router as rootRouter } from "./src/routes/rootRoutes";
