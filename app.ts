@@ -3,7 +3,8 @@ import cors from "cors";
 import { pool } from "./psqlconfig";
 
 // Routes
-import {router as rootRouter } from "./src/routes/rootRoutes";
+import { router as rootRouter } from "./src/routes/rootRoutes";
+import { booksRouter } from './src/routes/bookRoutes';
 
 // Environment Variables
 if (process.env.NODE_ENV !== 'production') {
@@ -19,22 +20,8 @@ app.use(express.json())
 // connect to the database, process.env.NODE_ENV
 
 // Defining the routes
+app.use("/books", booksRouter);
 app.use("/", rootRouter);
-
-// testing database here
-const getBooks = (request:any, response:any) => {
-  pool.query('SELECT * FROM books', (error:any, results:any) => {
-    if (error) {
-      throw error
-    }
-    response.status(200).json(results.rows)
-  })
-}
-
-app
-  .route('/books')
-  // GET endpoint
-  .get(getBooks)
 
 // Listen to server
 app.listen( port, () => {
