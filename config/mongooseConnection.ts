@@ -35,7 +35,7 @@ export const mongooseConnection = (env: any) => {
                 useUnifiedTopology: true,
                 useFindAndModify: false
             })
-            .then(() => console.log('connected to development database'))
+            .then(() => console.log('* Connected to development database \n'))
             .catch((error: Error) => (console.log(error)))
     };
     // This listens and logs any errors after the initial connection

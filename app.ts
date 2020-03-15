@@ -26,7 +26,9 @@ app.use("/", rootRouter);
 
 // Listen to server
 app.listen( port, () => {
-    console.log( `BiblioFile - server listening at http://localhost:${ port }` );
+    console.log( `\n --------------------------------------------------------------------\n
+        BiblioFile - server listening at http://localhost:${ port }
+        \n --------------------------------------------------------------------\n` );
 } );
 
 // export app
