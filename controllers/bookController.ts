@@ -22,7 +22,6 @@ export const getBook =  async (req: Request, res: Response) => {
     const { id } = req.params;
     console.log(`get on '/book/:id - book with ID ${id}`)
     axios.get<ServerResponse>(`https://www.googleapis.com/books/v1/volumes/${id}?key=${process.env.GOOGLE_API_KEY}`)
-    // axios.get(`https://www.googleapis.com/books/v1/volumes/QVn-CgAAQBAJ?key=${process.env.GOOGLE_API_KEY}`)
         .then(response => {
             const bookData = response.data;
             res.send(bookData);

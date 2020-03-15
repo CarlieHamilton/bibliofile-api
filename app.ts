@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import { pool } from "./psqlconfig";
+import { mongooseConnection } from './config/mongooseConnection';
 
 // Routes
 import { router as rootRouter } from "./src/routes/rootRoutes";
@@ -16,8 +16,9 @@ const port = process.env.PORT || 3003;
 // Defining Express Server
 const app = express();
 app.use(cors());
-app.use(express.json())
+app.use(express.json());
 // connect to the database, process.env.NODE_ENV
+mongooseConnection(process.env.NODE_ENV);
 
 // Defining the routes
 app.use("/books", booksRouter);
