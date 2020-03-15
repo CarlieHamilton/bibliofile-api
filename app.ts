@@ -19,7 +19,8 @@ app.use(cors());
 app.use(express.json());
 // connect to the database, process.env.NODE_ENV
 
-const dbConn = "mongodb://localhost/bibliofile";
+// const dbConn = "mongodb://localhost/bibliofile";
+const dbConn = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_CLUSTER}/${process.env.DB_NAME}?retryWrites=true&w=majority`;
 mongoose.connect(
     dbConn,
     {
