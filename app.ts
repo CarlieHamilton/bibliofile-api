@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import mongoose from "mongoose";
 
 // Routes
 import { router as rootRouter } from "./src/routes/rootRoutes";
@@ -17,6 +18,23 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 // connect to the database, process.env.NODE_ENV
+
+const dbConn = "mongodb://localhost/bibliofile";
+mongoose.connect(
+    dbConn,
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useFindAndModify: false
+    },
+    err => {
+        if (err) {
+            console.log("Error connecting to the database", err)
+        } else {
+            console.log("Connected to the database")
+        }
+    }
+)
 
 // Defining the routes
 app.use("/books", booksRouter);
