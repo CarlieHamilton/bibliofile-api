@@ -12,12 +12,7 @@ $ npm i
 ```
 This should install the dependencies.
 
-PostgreSQL is used for the database. To install postgres onto your system:
-
-```
-$ sudo apt-get update
-$ sudo apt-get install postgresql postgresql-contrib
-```
+The database is [MongoDB](https://docs.mongodb.com/manual/installation/).
 
 In the repository there is a sample environment file, under `~/.env.sample`. This file should be duplicated and renamed to simply `.env`. Then , the variables should be filled out, using the sample as a guide.
 
@@ -51,4 +46,4 @@ $ npm test
 
 Bibliofile Api is build using Typescript! Mainly because I enjoy types. But also because I thought that creating a C# ASP.net Core backend would take me too long to do. I would have liked to have given Crystal a try, but I was worried there wouldn't be enough dependencies or support for it. I am totally going to try Crystal one of these days. But yes, here we are, with a typescript api.
 
-PostgreSQL has been chosen for the database, mainly because a relational database seemed logical at the time (although possibly I should have given more thought to this...), I am already proficient in it (to make development quicker), and it is supported out of the box on Heroku, where I plan to deploy.
+MongoDB has been chosen for the database because I had some troubles with PostgreSQL on my computer. Heh. Yeah. I am using that [Cloud Atlas](https://www.mongodb.com/cloud/atlas) service to host my production database, as they have a free tier.
