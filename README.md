@@ -28,36 +28,11 @@ This will start the server. The api by default runs on the port `localhost:3003`
 
 ## Routes
 
-The following routes are defined for this api:
+[Routes are defined in this document](/routes/routes.md)
 
-### 📖 Books
+I've included sample request bodies so that I can remember how to use them...
 
-#### GET
-
-`/books` - books from a search.
-
-The request body takes in a title and an author
-
-```
-{
-	"title":"stormlight archive",
-	"author":"sanderson"
-}
-```
-
-`/book/:id` - book with google book id
-
-### 👤 Users
-
-#### GET
-
-`/users` - all users
-
-`/user/:userId` - an individual user GET by id
-
-#### POST
-
-`/user` - create a new user
+You can also see sample API requests in the [restTest folder](/restTest)
 
 ## Tests
 

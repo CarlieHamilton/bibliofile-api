@@ -5,9 +5,9 @@ import { mongooseConnection } from './config/mongooseConnection';
 // import { User } from './models/user';
 
 // Routes
-import { router as rootRouter } from "./src/routes/rootRoutes";
-import { booksRouter } from './src/routes/bookRoutes';
-import { userRouter } from "./src/routes/userRoutes";
+import { router as rootRouter } from "./routes/rootRoutes";
+import { booksRouter } from './routes/bookRoutes';
+import { userRouter } from "./routes/userRoutes";
 
 // Environment Variables
 if (process.env.NODE_ENV !== 'production') {
