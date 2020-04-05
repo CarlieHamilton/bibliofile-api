@@ -5,7 +5,9 @@ import { ServerResponse } from 'http';
 // Get books - from a search.
 export const getBooks = async (req: express.Request, res: express.Response) => {
     const { title, author } = req.body;
+    
     console.log(`get on '/books/ - search for title - ${title}, author - ${author} `)
+
     axios.get(`https://www.googleapis.com/books/v1/volumes?q=${title}+inauthor:${author}&key=${process.env.GOOGLE_API_KEY}`)
         .then(response => {
             const searchResponse = response.data.items;

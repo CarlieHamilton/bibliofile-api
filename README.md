@@ -30,7 +30,22 @@ This will start the server. The api by default runs on the port `localhost:3003`
 
 The following routes are defined for this api:
 
-(OK, yeah, this is an API but I haven't gotten any routes defined yet...)
+### Books
+
+#### GET
+
+`/books` - books from a search.
+
+The request body takes in a title and an author
+
+```
+{
+	"title":"stormlight archive",
+	"author":"sanderson"
+}
+```
+
+`/book/:id` - book with google book id
 
 ## Tests
 
