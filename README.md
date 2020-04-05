@@ -47,6 +47,18 @@ The request body takes in a title and an author
 
 `/book/:id` - book with google book id
 
+### Users
+
+#### GET
+
+`/users` - all users
+
+`/user/:userId` - an individual user GET by id
+
+#### POST
+
+`/user` - create a new user
+
 ## Tests
 
 I haven't created any tests yet (or I have but haven't talked about them here because I am lazy to update the documentation...), but I am planning to use the `Mocha` testing framework with `Chai`.
