@@ -1,6 +1,8 @@
 # Routes
 
-The following routes are defined for this api:
+The following routes are defined for this api.
+
+All see sample API calls in the [restTest folder](../restTest)
 
 ## 📖 Books
 
