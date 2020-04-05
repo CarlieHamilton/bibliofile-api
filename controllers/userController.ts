@@ -5,7 +5,6 @@ import { getUserById, getAllUsers } from "../utils/userUtils";
 
 // GET single user
 export const getUser = (req: Request, res: Response) => {
-    console.log(req.params);
     getUserById(req).exec((err: Error, user: User) => {
         if (err) {
             res.status(404);
