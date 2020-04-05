@@ -30,7 +30,7 @@ This will start the server. The api by default runs on the port `localhost:3003`
 
 The following routes are defined for this api:
 
-### Books
+### 📖 Books
 
 #### GET
 
@@ -47,7 +47,7 @@ The request body takes in a title and an author
 
 `/book/:id` - book with google book id
 
-### Users
+### 👤 Users
 
 #### GET
 
