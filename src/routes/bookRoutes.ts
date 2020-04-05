@@ -4,4 +4,4 @@ import { getBook, getBooks } from '../../controllers/bookController';
 export const booksRouter = express.Router();
 
 router.get("/books", getBooks);
-router.get('/book/:id', getBook)
+router.get('/book/:id', getBook);
