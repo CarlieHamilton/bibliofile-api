@@ -1,0 +1,24 @@
+{
+  "name": "bibliofile-api",
+  "version": "1.0.0",
+  "description": "An API for Book Lovers",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node ./src/server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlueCodeThree/bibliofile-api.git"
+  },
+  "author": "Carlie Hamilton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BlueCodeThree/bibliofile-api/issues"
+  },
+  "homepage": "https://github.com/BlueCodeThree/bibliofile-api#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "ts-node": "^8.9.1",
+    "typescript": "^3.8.3"
+  }
+}
