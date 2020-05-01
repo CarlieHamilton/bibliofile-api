@@ -2,8 +2,11 @@
   "compilerOptions": {
     "sourceMap": true,
     "target": "es2017",
-    "outDir": "./dist",
-    "baseUrl": "./src"
+    "outDir": "./build",
+    "baseUrl": "./src",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
   },
   "include": [
     "src/**/*.ts", "src/server.ts"

@@ -1,5 +1,5 @@
-import * as mongoose from 'mongoose';
-import Book from './book.interface';
+import mongoose from 'mongoose';
+import { Book } from './book.interface';
 
 const bookSchema = new mongoose.Schema({
     title: String,

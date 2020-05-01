@@ -1,12 +1,11 @@
-GET http://localhost:3003/books
-
-###
-
-POST http://localhost:3003/books
+GET http://localhost:3003/book/search
 Content-Type: application/json
 
 {
     "title": "The Name Of The Wind",
-    "author": "Patrick Rothfuss",
-    "description": "Learn the name of the wind and controll the wind yeah"
+    "author": "Patrick Rothfuss"
 }
+
+###
+
+GET http://localhost:3003/book/BcG2dVRXKukC
