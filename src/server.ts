@@ -1,4 +1,4 @@
-import mongooseConnection from '../config/mongooseConfig';
+import mongooseConnection from './config/mongooseConfig';
 
 import App from './app';
 import BooksController from './books/books.controller';

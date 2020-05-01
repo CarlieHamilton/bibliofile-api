@@ -15,7 +15,7 @@ const mongooseConnection = (env: any) => {
                 useUnifiedTopology: true,
                 useFindAndModify: false
             })
-            .then(() => console.log("connected to the test database"))
+            .then(() => console.log("Connected to the test database"))
             .catch((error: Error) => console.log(error));
     } else if (env === 'production') {
         mongoose
@@ -24,7 +24,7 @@ const mongooseConnection = (env: any) => {
                 useUnifiedTopology: true,
                 useFindAndModify: false
             })
-            .then(() => console.log('connected to Bibliofile database in production'))
+            .then(() => console.log('Connected to Bibliofile database in production'))
             .catch((error: Error) => console.log(error));
     } else {
         mongoose
@@ -33,7 +33,7 @@ const mongooseConnection = (env: any) => {
                 useUnifiedTopology: true,
                 useFindAndModify: false
             })
-            .then(() => console.log('connected to development database'))
+            .then(() => console.log('Connected to development database'))
             .catch((error: Error) => (console.log(error)))
     };
     // This listens and logs any errors after the initial connection
