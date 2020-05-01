@@ -1,7 +1,11 @@
-import * as express from 'express';
-const app = express();
-app.get('/', (request, response) => {
-    response.send('Carlie is cool');
-});
+import App from './app';
+import BooksController from './books/books.controller';
 
-app.listen(3003);
+const app = new App(
+  [
+    new BooksController(),
+  ],
+  3003,
+);
+
+app.listen();
