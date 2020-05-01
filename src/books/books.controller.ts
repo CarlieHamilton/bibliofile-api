@@ -1,6 +1,8 @@
 import express, { Request, Response } from 'express';
 import axios from 'axios';
 import { ServerResponse } from 'http';
+import { Book } from './book.interface';
+import bookModel from './book.model';
 
 // GET books from a google search
 export const getBooks = async (request: Request, response: Response) => {
@@ -27,6 +29,31 @@ export const getBook = async (request: Request, response: Response) => {
         .then(res => {
             const bookData = res.data;
             response.send(bookData);
+        })
+        .catch(err => {
+            response.status(500).send(err);
+        })
+}
+
+// POST book to wishlist
+export const addBookToWishlist = async (request: Request, response: Response) => {
+    const {
+        title,
+        author,
+        description
+    } = request.body;
+
+    const book = new bookModel({
+        title,
+        author,
+        description
+    })
+
+    book.save()
+        .then(() => {
+            response.status(200).json({
+                message: 'Book successfully saved'
+            })
         })
         .catch(err => {
             response.status(500).send(err);

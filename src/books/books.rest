@@ -13,3 +13,13 @@ GET http://localhost:3003/book/BcG2dVRXKukC
 ###
 
 GET http://localhost:3003/error-testing
+
+###
+POST http://localhost:3003/book/add
+Content-Type: application/json
+
+{
+    "title": "The Name Of The Wind",
+    "author": "Patrick Rothfuss",
+    "doscription": "A book where you name atmospheric gas"
+}
