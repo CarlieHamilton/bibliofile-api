@@ -1,5 +1,21 @@
 export interface Book {
-    title: string,
-    author: string,
-    description: string
+    bookInfo: BookInfo,
+    cover: BookThumbnails
 }
+
+interface BookInfo {
+    title: string,
+    subtitle: string,
+    authors: string[],
+    description: string,
+    publisher: string,
+    publishedDate: Date,
+    pageCount: number,
+}
+
+interface BookThumbnails {
+    thumbnail: string,
+    medium: string,
+    large: string
+}
+
