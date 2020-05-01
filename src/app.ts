@@ -24,6 +24,7 @@ class App {
 
     public listen() {
         this.app.listen(this.port, () => {
+            console.log("");
             console.log(`BiblioFile - server listening at http://localhost:${this.port}`);
         });
     }

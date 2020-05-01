@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/BlueCodeThree/bibliofile-api#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "mongoose": "^5.9.11",
     "ts-node": "^8.9.1",
     "typescript": "^3.8.3"
   },
