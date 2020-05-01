@@ -9,3 +9,7 @@ Content-Type: application/json
 ###
 
 GET http://localhost:3003/book/BcG2dVRXKukC
+
+###
+
+GET http://localhost:3003/error-testing

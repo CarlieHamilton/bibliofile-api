@@ -5,6 +5,10 @@ import mongooseConnection from './config/mongooseConfig';
 // Import Routes
 import { booksRouter } from './books/books.routes';
 
+// Import Handlers
+import { errorHandler } from './utils/error.middleware';
+import { notFoundHandler } from './utils/notFound.middleware';
+
 // Environment Variable Setup
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
@@ -20,6 +24,10 @@ mongooseConnection(process.env.NODE_ENV);
 
 // Defining Routes
 app.use('/book', booksRouter);
+
+// Defining handlers
+app.use(errorHandler);
+app.use(notFoundHandler);
 
 
 // Listen to the server! Can you hear her sing?
