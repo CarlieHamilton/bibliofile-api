@@ -1,11 +1,11 @@
 import User from "users/user.interface";
-import { TokenData, DataStoredInToken } from "./auth.interface";
+import { Token, DataStoredInToken } from "./auth.interface";
 import jwt from 'jsonwebtoken';
 import { Response, Request, NextFunction } from "express";
 import RequestWithUser from "users/requestWithUser.interface";
 
 export const createToken = (user: User) => {
-    const expiry = 60*60;
+    const expiry = '24h';
     const secret = process.env.JWT;
 
     return jwt.sign({
@@ -17,7 +17,7 @@ export const createToken = (user: User) => {
     {
         subject: user._id.toString(),
         expiresIn: expiry
-    })
+    });
 }
 
 export const checkToken =  (request: RequestWithUser, response: Response, next: NextFunction) => {

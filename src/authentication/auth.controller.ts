@@ -22,10 +22,10 @@ export const registration = (request: Request, response: Response, next: NextFun
                     password: hashedPassword
                 })
                     .then((user) => {
-                        const tokenData = createToken(user);
-                        // response.setHeader('Set-Cookie', [createCookie(tokenData)]);
+                        const token = createToken(user);
                         response.status(200).json({
-                            message: `user with username ${user.username} successfully created`
+                            message: `user with username ${user.username} successfully created`,
+                            token: token
                         })
                     })
             }
