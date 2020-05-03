@@ -1,9 +1,9 @@
-import express, { Request, Response } from 'express';
+import { Request, Response, NextFunction } from 'express';
 import axios from 'axios';
 import { ServerResponse } from 'http';
 import { Book } from './book.interface';
 import bookModel from './book.model';
-import { booksRouter } from './books.routes';
+import BookNotFoundException from './bookNotFoundException';
 
 // GET books from a google search
 export const bookSearch = async (request: Request, response: Response) => {
@@ -40,17 +40,27 @@ export const getBookFromGoogle = async (request: Request, response: Response) =>
 export const getAllBooks = (request: Request, response: Response) => {
     bookModel.find()
         .then(books => {
-            response.send(books);
+            response.status(200).json({
+                message: "All books got",
+                books: books
+            });
         })
 }
 
 // GET a book from database by ID
-export const getBookById = (request: Request, response: Response) => {
+export const getBookById = (request: Request, response: Response, next: NextFunction) => {
     const id = request.params.id;
     bookModel.findById(id)
         .then(book => {
-            response.send(book);
-        })
+            if (book) {
+                response.status(200).json({
+                    message: "Book retrieved",
+                    book: book
+                })
+            } else {
+                next(new BookNotFoundException(id));
+            }
+       })
 }
 
 // POST book to database
@@ -69,27 +79,31 @@ export const createBook = async (request: Request, response: Response) => {
 }
 
 // PATCH book to database (remember Carlie, PATCH updates some, PUT replaces)
-export const updateBook = (request: Request, response: Response) => {
+export const updateBook = (request: Request, response: Response, next: NextFunction) => {
     const id = request.params.id;
     const bookData: Book = request.body;
     bookModel.findByIdAndUpdate(id, bookData, { new: true })
         .then(book => {
-            response.status(200).json({
-                message: "your book has been updated!",
-                book: book })
-        })
+            if (book) {
+                response.status(200).json({
+                    message: "your book has been updated!",
+                    book: book })
+            } else {
+                next(new BookNotFoundException(id));
+            }
+       })
 }
 
 // DELETE a book from database
-export const deleteBook = (request: Request, response: Response) => {
+export const deleteBook = (request: Request, response: Response, next: NextFunction) => {
     const id = request.params.id;
     bookModel.findByIdAndDelete(id, (err, book) => {
-        if (!book) { response.status(404).json({
-            message: "Book not found"
-        })} else {
+        if (book) {
             response.status(200).json({
                 message: "Book deleted"
             })
+        } else {
+            next(new BookNotFoundException(id));
         }
     })
 }

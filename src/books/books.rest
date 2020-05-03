@@ -12,7 +12,7 @@ GET http://localhost:3003/book/google/QqQYFam07ysC
 
 ###
 
-GET http://localhost:3003/error-testing
+GET http://localhost:3003/error-testing-404
 
 ###
 POST http://localhost:3003/book/add

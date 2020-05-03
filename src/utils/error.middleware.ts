@@ -1,4 +1,4 @@
-import HttpException from './http-exception';
+import HttpException from './httpException';
 import { Request, Response, NextFunction } from 'express';
 
 export const errorHandler = (
@@ -10,5 +10,8 @@ export const errorHandler = (
     const status = error.statusCode || 500;
     const message = error.message || 'OK, something has gone wrong here. We are having some problems';
 
-    response.status(status).send(message);
+    response.status(status).send({
+        status,
+        message
+    });
 };
