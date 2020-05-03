@@ -1,5 +1,13 @@
 import express from 'express';
-import { getBookFromGoogle, bookSearch, createBook, getAllBooks, getBookById, updateBook } from '../books/books.controller';
+import {
+    getBookFromGoogle,
+    bookSearch,
+    createBook,
+    getAllBooks,
+    getBookById,
+    updateBook,
+    deleteBook
+} from '../books/books.controller';
 import { checkJwt } from '../utils/authz.middleware';
 
 export const booksRouter = express.Router();
@@ -12,3 +20,4 @@ booksRouter.get('/:id', getBookById);
 // booksRouter.use(checkJwt);
 booksRouter.post('/add', createBook);
 booksRouter.patch('/:id', updateBook);
+booksRouter.delete('/:id', deleteBook);

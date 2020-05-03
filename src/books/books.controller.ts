@@ -80,3 +80,16 @@ export const updateBook = (request: Request, response: Response) => {
         })
 }
 
+// DELETE a book from database
+export const deleteBook = (request: Request, response: Response) => {
+    const id = request.params.id;
+    bookModel.findByIdAndDelete(id, (err, book) => {
+        if (!book) { response.status(404).json({
+            message: "Book not found"
+        })} else {
+            response.status(200).json({
+                message: "Book deleted"
+            })
+        }
+    })
+}

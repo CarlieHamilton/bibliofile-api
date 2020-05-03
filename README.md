@@ -1,7 +1,6 @@
 # Bibliofile Api
-API for bibliophiles
 
-This readme is obviously a WIP, right now I'm just writing notes to myself about what I need to include 😅
+API for bibliophiles
 
 ## Installation & Setup
 
@@ -24,13 +23,13 @@ To Run the Server, run the command in your command line:
 $ npm start
 ```
 
-This will start the server. The api by default runs on the port `localhost:3003` (mainly because 3 is my favourite number)
+This will start the server.
 
 ## Routes
 
-Each section of the api has a `.rest` file which shows sample api calls.
+Each section of the api has a `.rest` file which shows sample api calls. You can test these routes yourself using these `.rest` files by using the VS Code extension `REST Client`. Click on `Send Request` in VS Code to run the api call (your server must be running).
 
-[Routes Document](/src/routes.md)
+- [All The Routes](/docs/routes.md)
 
 ## Tests
 

@@ -56,3 +56,7 @@ Content-Type: application/json
         "title": "Testing PUT"
     }
 }
+
+###
+
+DELETE http://localhost:3003/book/5eae2ed3f6c75c32ef6298dc
