@@ -17,6 +17,7 @@ GET http://localhost:3003/error-testing-404
 ###
 POST http://localhost:3003/book/add
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWFlN2M0ZGU1NmU3ZjRkNTQwMWE3NGQiLCJ1c2VybmFtZSI6IkdvZGRlc3NDYXJsaWUiLCJpYXQiOjE1ODg1MDExMjgsImV4cCI6MTU4ODUwNDcyOCwic3ViIjoiNWVhZTdjNGRlNTZlN2Y0ZDU0MDFhNzRkIn0.4nZOcVltOuSAnsumGitGQuTohf6rAWYseP9BoxniJQk
 
 {
     "bookInfo": {
@@ -48,15 +49,17 @@ GET http://localhost:3003/book/all
 GET http://localhost:3003/book/5eae2040e43ec51e40921cc9
 
 ###
-PATCH http://localhost:3003/book/5eae2040e43ec51e40921cc9
+PATCH http://localhost:3003/book/5eae9ae3271d531ca7dca806
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWFlN2M0ZGU1NmU3ZjRkNTQwMWE3NGQiLCJ1c2VybmFtZSI6IkdvZGRlc3NDYXJsaWUiLCJpYXQiOjE1ODg1MDExMjgsImV4cCI6MTU4ODUwNDcyOCwic3ViIjoiNWVhZTdjNGRlNTZlN2Y0ZDU0MDFhNzRkIn0.4nZOcVltOuSAnsumGitGQuTohf6rAWYseP9BoxniJQk
 
 {
     "bookInfo": {
-        "title": "Testing PUT"
+        "title": "Updating title"
     }
 }
 
 ###
 
-DELETE http://localhost:3003/book/5eae2ed3f6c75c32ef6298dc
+DELETE http://localhost:3003/book/5eae9ae3271d531ca7dca806
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWFlN2M0ZGU1NmU3ZjRkNTQwMWE3NGQiLCJ1c2VybmFtZSI6IkdvZGRlc3NDYXJsaWUiLCJpYXQiOjE1ODg1MDExMjgsImV4cCI6MTU4ODUwNDcyOCwic3ViIjoiNWVhZTdjNGRlNTZlN2Y0ZDU0MDFhNzRkIn0.4nZOcVltOuSAnsumGitGQuTohf6rAWYseP9BoxniJQk
