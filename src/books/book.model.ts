@@ -15,6 +15,9 @@ const bookSchema = new mongoose.Schema({
         thumbnail: String,
         medium: String,
         large: String
+    },
+    googleInfo: {
+        id: String
     }
 });
 

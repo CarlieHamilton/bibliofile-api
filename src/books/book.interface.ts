@@ -1,6 +1,7 @@
 export interface Book {
     bookInfo: BookInfo,
-    cover: BookThumbnails
+    cover: BookThumbnails,
+    googleInfo: GoogleInfo
 }
 
 interface BookInfo {
@@ -19,3 +20,6 @@ interface BookThumbnails {
     large: string
 }
 
+interface GoogleInfo {
+    id: string
+}
