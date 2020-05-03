@@ -28,11 +28,9 @@ This will start the server. The api by default runs on the port `localhost:3003`
 
 ## Routes
 
-[Routes are defined in this document](/routes/routes.md)
+Each section of the api has a `.rest` file which shows sample api calls.
 
-I've included sample request bodies so that I can remember how to use them...
-
-You can also see sample API requests in the [restTest folder](/restTest)
+[Routes Document](/src/routes.md)
 
 ## Tests
 
@@ -46,7 +44,7 @@ $ npm test
 
 ## How It's Built
 
-Bibliofile Api is build using Typescript! Mainly because I enjoy types. But also because I thought that creating a C# ASP.net Core backend would take me too long to do. I would have liked to have given Crystal a try, but I was worried there wouldn't be enough dependencies or support for it. I am totally going to try Crystal one of these days. But yes, here we are, with a typescript api.
+Bibliofile Api is build using Typescript! Mainly because I enjoy types and want to learn more typescript.
 
 MongoDB has been chosen for the database because I had some troubles with PostgreSQL on my computer. Heh. Yeah. I am using that [Cloud Atlas](https://www.mongodb.com/cloud/atlas) service to host my production database, as they have a free tier.
 
