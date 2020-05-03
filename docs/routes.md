@@ -2,6 +2,33 @@
 
 The following routes are defined for this api.
 
+## 👤 Authentication
+
+### POST
+
+- [Sample API calls](../src/authentication/auth.rest)
+
+`/auth/login` - login a user via email
+
+```json
+{
+    "email": "fool@buckkeep.com",
+    "password": "iveNeverBeenWise"
+}
+```
+
+`/auth/register` - create a new user
+
+```json
+{
+    "username": "Marty_McFly",
+    "password": "this_is_heavy",
+    "email": "outta_time@1985.com"
+}
+```
+
+---
+
 ## 📖 Books
 
 - [Sample API Calls](../src/books/books.rest)
@@ -36,25 +63,3 @@ The request body takes in a title and an author (both or either works)
 ### POST
 
 `/book/add` - add book to database
-
-## 👤 Users
-
-(not yet!)
-
-### GET
-
-`/users` - all users
-
-`/user/:userId` - an individual user GET by id
-
-### POST
-
-`/user` - create a new user
-
-```json
-{
-    "username": "Marty_McFly",
-    "password": "this_is_heavy",
-    "email": "outta_time@1985.com"
-}
-```
