@@ -3,10 +3,10 @@ export default interface User {
     username: string,
     email: string,
     password: string,
-    userType: UserType
+    role: Role
 }
 
-enum UserType {
+enum Role {
     Reader,
     Author
 }
