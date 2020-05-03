@@ -4,6 +4,7 @@ import mongooseConnection from './config/mongooseConfig';
 
 // Import Routes
 import { booksRouter } from './books/books.routes';
+import { usersRouter } from './users/users.routes';
 
 // Import Handlers
 import { errorHandler } from './utils/error.middleware';
@@ -24,6 +25,7 @@ mongooseConnection(process.env.NODE_ENV);
 
 // Defining Routes
 app.use('/book', booksRouter);
+app.use('/user', usersRouter);
 
 // Defining handlers
 app.use(errorHandler);

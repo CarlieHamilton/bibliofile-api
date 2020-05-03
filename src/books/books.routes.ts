@@ -7,7 +7,7 @@ import {
     getBookById,
     updateBook,
     deleteBook
-} from '../books/books.controller';
+} from './books.controller';
 import { checkJwt } from '../utils/authz.middleware';
 
 export const booksRouter = express.Router();
