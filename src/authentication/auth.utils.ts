@@ -1,5 +1,4 @@
 import User from "users/user.interface";
-import { Token, DataStoredInToken } from "./auth.interface";
 import jwt from 'jsonwebtoken';
 import { Response, Request, NextFunction } from "express";
 import RequestWithUser from "users/requestWithUser.interface";
