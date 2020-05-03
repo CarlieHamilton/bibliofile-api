@@ -1,8 +1,8 @@
 import bcrypt from 'bcrypt';
 import { Request, Response, NextFunction } from 'express';
-import userModel from './user.model';
+import userModel from '../users/user.model';
 import UserAlreadyExists from './userAlreadyExistsException';
-import User from './user.interface';
+import User from '../users/user.interface';
 import WrongUserCredentialsException from './wrongUserCredentialsException';
 
 // Register a new user into the database
