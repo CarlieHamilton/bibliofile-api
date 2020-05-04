@@ -8,3 +8,18 @@ Content-Type: application/json
 ###
 
 GET http://localhost:3003/u/5eae7c4de56e7f4d5401a74d
+
+###
+
+PATCH http://localhost:3003/u/5eae7c4de56e7f4d5401a74d
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWFlYmYyMTk0NTc0NDZkNGQ2ZmEwZjciLCJ1c2VybmFtZSI6IkdvZGRlc3NDYXJsaWUiLCJpYXQiOjE1ODg1MTA0OTcsImV4cCI6MTU4ODU5Njg5Nywic3ViIjoiNWVhZWJmMjE5NDU3NDQ2ZDRkNmZhMGY3In0.LiR18zBPb3L43uvSQQjsaOQuLoCRXuzJxQoVfRbPdRE
+
+{
+    "username": "AmazingCarlie"
+}
+
+###
+
+DELETE http://localhost:3003/u/5eae7c4de56e7f4d5401a74d
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWFlYmYyMTk0NTc0NDZkNGQ2ZmEwZjciLCJ1c2VybmFtZSI6IkdvZGRlc3NDYXJsaWUiLCJpYXQiOjE1ODg1MTA0OTcsImV4cCI6MTU4ODU5Njg5Nywic3ViIjoiNWVhZWJmMjE5NDU3NDQ2ZDRkNmZhMGY3In0.LiR18zBPb3L43uvSQQjsaOQuLoCRXuzJxQoVfRbPdRE
