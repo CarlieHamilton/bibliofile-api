@@ -4,9 +4,9 @@ The following routes are defined for this api.
 
 ## 👤 Authentication
 
-### POST
-
 - [Sample API calls](../src/authentication/auth.rest)
+
+### POST
 
 `/auth/login` - login a user via email
 
@@ -63,3 +63,21 @@ The request body takes in a title and an author (both or either works)
 ### POST
 
 `/book/add` - add book to database
+
+## 🙆 Users
+
+- [Sample API Calls](../src/users/users.rest)
+
+### GET
+
+`/u/search` - search for a user (right now this just gets all users)
+
+`/u/:id` - user by id
+
+### DELETE
+
+`/u/:id` - deletes user by id
+
+### PATCH
+
+`/u/:id` - update a user, requires authorization.
