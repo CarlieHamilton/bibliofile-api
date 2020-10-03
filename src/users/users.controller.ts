@@ -1,4 +1,4 @@
-import { Request, Response, NextFunction }from 'express';
+import { Request, Response, NextFunction } from 'express';
 import userModel from "./user.model";
 import UserNotFoundException from './userNotFoundException';
 import User from './user.interface';
