@@ -1,2 +1,5 @@
-import { Book } from './book.interface';
-import { Books } from './books.interface';
+import bookModel from './book.model';
+
+export const retrieveBookById = (id) => {
+    return bookModel.findById(id);
+}

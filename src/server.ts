@@ -6,6 +6,7 @@ import mongooseConnection from './config/mongooseConfig';
 import { booksRouter } from './books/books.routes';
 import { authRouter } from './authentication/auth.routes';
 import { usersRouter } from './users/users.routes';
+import { wishlistRouter } from './wishlist/wishlist.routes';
 
 // Import Handlers
 import { errorHandler } from './utils/error.middleware';
@@ -25,9 +26,10 @@ app.use(express.json());
 mongooseConnection(process.env.NODE_ENV);
 
 // Defining Routes
-app.use('/book', booksRouter);
 app.use('/auth', authRouter);
+app.use('/book', booksRouter);
 app.use('/u', usersRouter);
+app.use('/wishlist', wishlistRouter);
 
 // Defining handlers
 app.use(errorHandler);

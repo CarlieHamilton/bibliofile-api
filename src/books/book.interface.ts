@@ -1,7 +1,7 @@
 export interface Book {
     bookInfo: BookInfo,
     cover: BookThumbnails,
-    googleInfo: GoogleInfo
+    googleInfo: BookId
 }
 
 interface BookInfo {
@@ -20,6 +20,6 @@ interface BookThumbnails {
     large: string
 }
 
-interface GoogleInfo {
+export interface BookId {
     id: string
 }

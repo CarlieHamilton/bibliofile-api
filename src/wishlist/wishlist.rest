@@ -1,0 +1,6 @@
+POST http://localhost:3003/wishlist/add
+Content-Type: application/json
+
+{
+    "bookId": "BcG2dVRXKukh"
+}

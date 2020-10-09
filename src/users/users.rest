@@ -7,19 +7,19 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3003/u/5eae7c4de56e7f4d5401a74d
+GET http://localhost:3003/u/5eaea561328f562b263a4930
 
 ###
 
-PATCH http://localhost:3003/u/5eae7c4de56e7f4d5401a74d
+PATCH http://localhost:3003/u/5eaea561328f562b263a4930
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWFlYmYyMTk0NTc0NDZkNGQ2ZmEwZjciLCJ1c2VybmFtZSI6IkdvZGRlc3NDYXJsaWUiLCJpYXQiOjE1ODg1MTA0OTcsImV4cCI6MTU4ODU5Njg5Nywic3ViIjoiNWVhZWJmMjE5NDU3NDQ2ZDRkNmZhMGY3In0.LiR18zBPb3L43uvSQQjsaOQuLoCRXuzJxQoVfRbPdRE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Zjc2ZGVkN2E3ODhjOTFjMzk5Mzg0MTAiLCJ1c2VybmFtZSI6IkdvZGRlc3NDYXJsaWUiLCJpYXQiOjE2MDE2MjU4MTUsImV4cCI6MTYwMTcxMjIxNSwic3ViIjoiNWY3NmRlZDdhNzg4YzkxYzM5OTM4NDEwIn0.-1SStAVirMLpLYlLdUzUFjtZRdvIGtxtrUKlsaLZdTc
 
 {
-    "username": "AmazingCarlie"
+    "username": "TestingCarlie"
 }
 
 ###
 
-DELETE http://localhost:3003/u/5eae7c4de56e7f4d5401a74d
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWFlYmYyMTk0NTc0NDZkNGQ2ZmEwZjciLCJ1c2VybmFtZSI6IkdvZGRlc3NDYXJsaWUiLCJpYXQiOjE1ODg1MTA0OTcsImV4cCI6MTU4ODU5Njg5Nywic3ViIjoiNWVhZWJmMjE5NDU3NDQ2ZDRkNmZhMGY3In0.LiR18zBPb3L43uvSQQjsaOQuLoCRXuzJxQoVfRbPdRE
+DELETE http://localhost:3003/u/5eaea561328f562b263a4930
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Zjc2ZGVkN2E3ODhjOTFjMzk5Mzg0MTAiLCJ1c2VybmFtZSI6IkdvZGRlc3NDYXJsaWUiLCJpYXQiOjE2MDE2MjU4MTUsImV4cCI6MTYwMTcxMjIxNSwic3ViIjoiNWY3NmRlZDdhNzg4YzkxYzM5OTM4NDEwIn0.-1SStAVirMLpLYlLdUzUFjtZRdvIGtxtrUKlsaLZdTc
