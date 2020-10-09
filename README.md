@@ -6,9 +6,10 @@ API for bibliophiles
 
 To install this api, fork or clone this repository and run the command:
 
-```
+```code
 $ npm i
 ```
+
 This should install the dependencies.
 
 The database is [MongoDB](https://docs.mongodb.com/manual/installation/).
@@ -19,7 +20,7 @@ In the repository there is a sample environment file, under `~/.env.sample`. Thi
 
 To Run the Server, run the command in your command line:
 
-```
+```code
 $ npm start
 ```
 
@@ -37,7 +38,7 @@ I haven't created any tests yet (or I have but haven't talked about them here be
 
 To run all the tests, run the code:
 
-```
+```code
 $ npm test
 ```
 
