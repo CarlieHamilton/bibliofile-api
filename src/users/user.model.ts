@@ -5,11 +5,14 @@ const userSchema = new mongoose.Schema({
     username: String,
     email: String,
     password: String,
-    userType: {
+    role: {
         type: String,
         enum: ['Reader', 'Author'],
         default: 'Reader'
-    }
+    },
+    wishlist: [{
+        book_id: String
+    }]
 });
 
 const userModel = mongoose.model<User & mongoose.Document>('User', userSchema);
