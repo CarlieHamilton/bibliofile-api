@@ -25,7 +25,27 @@ export const retrieveBookFromGoogleById = async (id) => {
 };
 
 export const convertGoogleBookToBook = (googleBookData) => {
+    const convertedBook = {
+        bookInfo: {
+            title: googleBookData.volumeInfo.title,
+            subtitle: googleBookData.volumeInfo.subtitle,
+            authors: googleBookData.volumeInfo.authors,
+            description: googleBookData.volumeInfo.description,
+            publisher: googleBookData.volumeInfo.publisher,
+            publishedDate: googleBookData.volumeInfo.publishedDate,
+            pageCount: googleBookData.volumeInfo.pageCount
+        },
+        cover: {
+            thumbnail: googleBookData.volumeInfo.imageLinks.thumbnail,
+            medium: googleBookData.volumeInfo.imageLinks.medium,
+            large: googleBookData.volumeInfo.imageLinks.large
+        },
+        googleInfo: {
+            id: googleBookData.id
+        }
+    }
 
+    return convertedBook
 }
 
 export const saveBookToDatabase = async (bookData) => {
