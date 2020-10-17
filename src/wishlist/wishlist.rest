@@ -1,5 +1,6 @@
 POST http://localhost:3003/wishlist/add
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Zjc2ZGVkN2E3ODhjOTFjMzk5Mzg0MTAiLCJ1c2VybmFtZSI6IkdvZGRlc3NDYXJsaWUiLCJyb2xlIjoiUmVhZGVyIiwiaWF0IjoxNjAyOTE1NTI0LCJleHAiOjE2MDMwMDE5MjQsInN1YiI6IjVmNzZkZWQ3YTc4OGM5MWMzOTkzODQxMCJ9.TeVdIRl1eOdV-tR9NiYWLsl5oNpAes6Yp71pZIqrUkI
 
 {
     "bookId": "7r8yDwAAQBAJ"
