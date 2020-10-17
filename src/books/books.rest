@@ -3,7 +3,7 @@ Content-Type: application/json
 
 {
     "title": "",
-    "author": "Stephen King"
+    "author": "Tom"
 }
 
 ###

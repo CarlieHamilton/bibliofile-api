@@ -13,7 +13,7 @@ export const retrieveBookByGoogleId = async (id: BookId) => {
     return book;
 }
 
-export const retrieveBookFromGoogleById = async (id) => {
+export const retrieveBookFromGoogleById = async (id: BookId) => {
     try {
         const {data:response} = await axios.get<ServerResponse>(`https://www.googleapis.com/books/v1/volumes/${id}?key=${process.env.GOOGLE_API_KEY}`)
         return response
@@ -48,10 +48,23 @@ export const convertGoogleBookToBook = (googleBookData) => {
     return convertedBook
 }
 
-export const saveBookToDatabase = async (bookData) => {
+export const saveBookToDatabase = async (bookData: Book) => {
     const book = new bookModel(bookData);
     book.save()
         .then(book => {
             console.log("saved")
         })
+}
+
+export const checkBookInDatabase = async (id: BookId) => {
+    let book = await retrieveBookByGoogleId(id);
+
+    if (book == null) {
+        const bookFromGoogle = await retrieveBookFromGoogleById(id);
+        const convertedBook = convertGoogleBookToBook(bookFromGoogle);
+        saveBookToDatabase(convertedBook);
+        return convertedBook;
+    }
+
+    return book;
 }
