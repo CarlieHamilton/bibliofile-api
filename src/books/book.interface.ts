@@ -1,7 +1,9 @@
 export interface Book {
     bookInfo: BookInfo,
     cover: BookThumbnails,
-    googleInfo: BookId
+    googleInfo: {
+        id: BookId
+    }
 }
 
 interface BookInfo {

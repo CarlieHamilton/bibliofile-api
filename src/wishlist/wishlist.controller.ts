@@ -1,22 +1,22 @@
 import { Request, Response, NextFunction } from 'express';
-import wishlistModel from './wishlist.model';
-import { BookId } from '../books/book.interface';
-import bookModel from '../books/book.model';
+import { GetUserAuthInfoRequest } from '../users/user.interface';
+// import axios from 'axios';
+// import { ServerResponse } from 'http';
+// import wishlistModel from './wishlist.model';
+// import { BookId } from '../books/book.interface';
+// import bookModel from '../books/book.model';
+// import { getBookFromGoogle } from 'books/books.controller';
+import { checkBookInDatabase } from '../books/books.service';
 
 // POST wishlist to database
-export const addBookToWishlist = async (request: Request, response: Response) => {
-    const { bookId } = request.body;
-    // console.log(bookId);
-    // check if the book is already in our database
-    bookModel.findOne({googleInfo: {id: bookId }},  (err, response) => {
-        if (err){
-            console.log(err);
-        }
-        else{
-            console.log("Result : ", response);
-        }
-    });
+export const addBookToWishlist = async (request: GetUserAuthInfoRequest, response: Response) => {
+    const { bookId: googleBookId } = request.body;
+    const book = await checkBookInDatabase(googleBookId);
+
+    console.log(request.user._id);
+
     // need the current logged in user.
-    // if it isn't, add it to the database --> use POST in books.controller
+    // have book id
+    // have the user id
     // then, add new row to the database
 }
