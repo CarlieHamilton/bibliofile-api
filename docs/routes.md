@@ -81,3 +81,11 @@ The request body takes in a title and an author (both or either works)
 ### PATCH
 
 `/u/:id` - update a user, requires authorization.
+
+---
+
+## ❤️ Wishlist
+
+### POST
+
+`/wishlist/add` - adds a book to a wishlist
